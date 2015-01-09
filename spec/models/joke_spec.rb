@@ -8,6 +8,6 @@ describe Joke do
 		end
 	end
 	it { should have_many(:votes)}
-	it { should belong_to(:joke)}
+	it { should belong_to(:user)}
 	it { should validate_presence_of(:body)}
 end
