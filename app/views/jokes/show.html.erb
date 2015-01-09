@@ -4,5 +4,12 @@
 <h3>vote score</h3>
 <%= @joke.score %>
 
+<h2> Comments </h2>
+<%= render @joke.comments %>
+<h2> Add a comment: </h2>
+<%= render '/comments/form' %>
+
+
+
 <%= link_to "Edit Joke", edit_joke_path(@joke)%>
 <%= link_to "Back", jokes_path %>

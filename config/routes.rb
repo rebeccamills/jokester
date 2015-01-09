@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       put "like", to: "jokes#upvote"
       put "dislike", to: "jokes#downvote"
     end
+    resources :comments
   end
   # post "/jokes/:joke_id/votes/upvote" => "jokes#upvote"
   # post "/jokes/:joke_id/votes/downvote" => "jokes#downvote"
