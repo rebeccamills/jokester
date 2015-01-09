@@ -3,9 +3,8 @@
 	<h1> <%= joke.user.email %></h1>
 	<h2> <%= joke.body %></h2>
 	<h3> <%= joke.vote_count %></h3>
-	<%= form_tag("/jokes/#{joke.id}/votes/upvote", method: "post") do %>
-	<%= submit_tag("upvote") %>
-	<% end %>
+	<%= link_to "upvote", "/jokes/#{joke.id}/votes/upvote", method: "post" %>
+	
 
 	<%= link_to "downvote", "/jokes/#{joke.id}/votes/downvote", method: "post" %>
 

@@ -3,7 +3,7 @@ class CreateVotes < ActiveRecord::Migration
     create_table :votes do |t|
       t.belongs_to :user
       t.belongs_to :joke
-      t.boolean :rating
+      t.integer :rating
     end
   end
 end
