@@ -2,7 +2,7 @@
 <h1><%= link_to 'New Joke', new_joke_path %></h1>
 
 <% @jokes.each do |joke| %>
-<div>
+<div class="jokes">
 	<h1> <%= joke.user.email %></h1>
 	<h2> <%= joke.body %></h2>
 	<p>  <%= joke.score %></p>
