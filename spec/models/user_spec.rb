@@ -7,4 +7,6 @@ describe User do
 			expect(user.class).to eq(User)
 		end
 	end
+	it { should have_many(:votes)}
+	
 end
