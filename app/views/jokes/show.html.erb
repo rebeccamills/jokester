@@ -1,0 +1,8 @@
+<%= @joke.user.email %> <br>
+
+<%= @joke.body %> <br>
+<h3>vote score</h3>
+<%= @joke.score %>
+
+<%= link_to "Edit Joke", edit_joke_path(@joke)%>
+<%= link_to "Back", jokes_path %>

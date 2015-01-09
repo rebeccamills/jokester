@@ -1,8 +1,14 @@
+
+<h1><%= link_to 'New Joke', new_joke_path %></h1>
+
 <% @jokes.each do |joke| %>
 <div>
 	<h1> <%= joke.user.email %></h1>
 	<h2> <%= joke.body %></h2>
 	<p>  <%= joke.score %></p>
+	<%= link_to "Joke Page", joke_path(joke) %>
+	<%= link_to "Edit Joke", edit_joke_path(joke) %>
+	<%= link_to "Destroy Joke", joke_path(joke), method: :delete, data: {confirm: "NOOO DON'T DOOOO IT, rusure?" } %>
 	<%= link_to "upvote", like_joke_path(joke), method: "put" %>
 	
 	<%= link_to "downvote", dislike_joke_path(joke), method: "put" %>
