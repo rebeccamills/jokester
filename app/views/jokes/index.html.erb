@@ -1,0 +1,6 @@
+<% @jokes.each do |joke| %>
+<div>
+	<h1> <%= joke.user.email %></h1>
+	<h2> <%= joke.body %></h2>
+</div>
+	<% end %>
