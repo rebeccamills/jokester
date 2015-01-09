@@ -1,0 +1,52 @@
+body {
+	font-family: 'Roboto Condensed', serif;
+  color: #191970;
+  background: #ddd;
+
+}
+
+h1 {
+	color: #BF0000;
+	text-decoration: underline;
+	font-weight: bolder;
+	border-bottom: 1px solid black;
+
+}
+
+
+.title {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 6em;
+	border-bottom: 2px solid black;
+
+}
+
+.jokes {
+	width: 50%;
+	height: 100%;
+	margin: auto;
+}
+
+.joke-page {
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	padding-left: 400px;
+}
+
+.edit-page {
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	padding-left: 300px;
+}
+
+a:hover {
+	color: red;
+}
+
+.form {
+	width: 50%;
+
+}
