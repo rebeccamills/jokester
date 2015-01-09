@@ -6,8 +6,11 @@
 	<%= form_tag("/jokes/#{joke.id}/votes/upvote", method: "post") do %>
 	<%= submit_tag("upvote") %>
 	<% end %>
-	<%= form_tag("/jokes/#{joke.id}/votes/downvote", method: "post") do %>
-	<%= submit_tag("downvote") %>
-	<% end %>
+
+	<%= link_to "downvote", "/jokes/#{joke.id}/votes/downvote", method: "post" %>
+
+	<%#=form_tag("/jokes/#{joke.id}/votes/downvote", method: "post") do %>
+	<%#= submit_tag("downvote") %>
+	
 </div>
 	<% end %>
