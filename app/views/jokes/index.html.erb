@@ -2,12 +2,10 @@
 <div>
 	<h1> <%= joke.user.email %></h1>
 	<h2> <%= joke.body %></h2>
-	<h3> <%= joke.vote_count %></h3>
-	<%= link_to "upvote", "/jokes/#{joke.id}/votes/upvote", method: "post" %>
+	<p>  <%= joke.score %></p>
+	<%= link_to "upvote", like_joke_path(joke), method: "put" %>
 	
-
-	<%= link_to "downvote", "/jokes/#{joke.id}/votes/downvote", method: "post" %>
-
+	<%= link_to "downvote", dislike_joke_path(joke), method: "put" %>
 	<%#=form_tag("/jokes/#{joke.id}/votes/downvote", method: "post") do %>
 	<%#= submit_tag("downvote") %>
 	

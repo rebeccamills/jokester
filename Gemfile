@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'acts_as_votable'
 gem 'shoulda-matchers'
 gem 'rspec-rails'
 gem 'devise'

@@ -3,9 +3,14 @@ Rails.application.routes.draw do
 
   root "jokes#index"
 
-  resources :jokes
-  post "/jokes/:joke_id/votes/upvote" => "votes#upvote"
-  post "/jokes/:joke_id/votes/downvote" => "votes#downvote"
+  resources :jokes do
+    member do
+      put "like", to: "jokes#upvote"
+      put "dislike", to: "jokes#downvote"
+    end
+  end
+  # post "/jokes/:joke_id/votes/upvote" => "jokes#upvote"
+  # post "/jokes/:joke_id/votes/downvote" => "jokes#downvote"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

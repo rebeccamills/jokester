@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	acts_as_voter
 	has_many :votes, :through => :jokes
 	has_many :jokes
 	has_many :comments, :through => :jokes
