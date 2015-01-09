@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root "jokes#index"
 
   resources :jokes
+  post "/jokes/:joke_id/votes/upvote" => "votes#upvote"
+  post "/jokes/:joke_id/votes/downvote" => "votes#downvote"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

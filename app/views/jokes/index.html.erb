@@ -2,5 +2,12 @@
 <div>
 	<h1> <%= joke.user.email %></h1>
 	<h2> <%= joke.body %></h2>
+	<h3> <%= joke.vote_count %></h3>
+	<%= form_tag("/jokes/#{joke.id}/votes/upvote", method: "post") do %>
+	<%= submit_tag("upvote") %>
+	<% end %>
+	<%= form_tag("/jokes/#{joke.id}/votes/downvote", method: "post") do %>
+	<%= submit_tag("downvote") %>
+	<% end %>
 </div>
 	<% end %>

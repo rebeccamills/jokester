@@ -11,9 +11,9 @@ user.password_confirmation = "valid_password"
 user.save!
 
 
-joke = user.jokes.create({body: "joke3"})
+joke = user.jokes.create({body: "joke3", vote_count: 0})
 joke.comments.create({body: "that is soooo funny!!!", user_id: user.id})
 
 vote = joke.votes.create({rating: true, user_id: user.id})
 
-user.jokes.create([{body: "3 guys walk into a bar..."}, {body: "Why did the chicken.."}])
+user.jokes.create([{body: "3 guys walk into a bar...", vote_count: 0}, {body: "Why did the chicken..", vote_count: 0}])
